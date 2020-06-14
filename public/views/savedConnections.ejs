@@ -1,0 +1,41 @@
+<!-- This is savedConnection page, Where user sees his saved connections -->
+<%- include('partials/header.ejs', {user: user}) -%>
+
+    <div class="tablePosition">
+        <h1 id="MyCollectionTittle">My Connections</h1>
+        <br />
+
+        <% if (userConnections.length > 0) { %>
+        <table>
+            <tr>
+                <th>Connection</th>
+                <th>Category</th>
+                <th>Attending?</th>
+                <th> </th>
+            </tr>
+                <% userConnections.forEach(userConnection => { %>
+                    <tr>
+                        <td><%=userConnection.connection[0].connectionName%></td>
+                        <td><%=userConnection.connection[0].connectionCategory%></td>
+                        <td><%=userConnection.rsvp%></td>
+                        <td>
+                            <form action="/connection/<%=userConnection.connection[0].connectionId%>" method="GET">
+                                <button type="submit">Update</button>
+                            </form>
+                            <form action="/user/rsvp" method="POST">
+                                <input type="hidden" name="_method" value="delete" />
+                                <input type="hidden" name="connection-id" value="<%= userConnection.connection[0].connectionId %>" />
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                    <% });%>
+        </table>
+
+    <% } else { %>
+        <h2 id="noconnection">You have no connections in your profile. Checkout the available connections or host your own connection.</h2>
+        <% } %>
+    </div>
+
+            <%- include('partials/footer.ejs') -%>

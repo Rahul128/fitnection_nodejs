@@ -1,0 +1,21 @@
+<!-- Login page where user can login to his account -->
+<%- include('partials/header.ejs', {user: user}) -%>
+
+<div id="signup_login">
+
+    <div class="caption_signup">
+        <h2 >Welcome to fintnection</h2><br><br>
+        <h4>Please enter your username and password to signin</h4>
+    </div>
+
+
+    <form id="signup-login" method="POST" action="/user/login">
+        <label for="fusername">User Name:  </label>
+        <input type="email" id="fusername" name="username"><br>
+        <label for="fpassword">Password: </label>
+        <input type="password" id="fpassword" name="password"><br>
+        <button id="cc"> Login</button>
+    </form>
+</div>
+
+<%- include('partials/footer.ejs') -%>

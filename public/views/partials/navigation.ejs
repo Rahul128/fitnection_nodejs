@@ -1,0 +1,27 @@
+<nav>
+    <ul>
+        <li id="home"><a href="/">Home</a> </li>
+        <li id="MyFitness"><a href="/connections">AllFitnections</a> </li>
+
+        <% if (user == null) { %>
+            <li id="Login"><a href="/user/login">Login</a> </li>
+            <li id="SignUp"><a href="/user/login">SignUp</a> </li>
+            <%} else { %>
+                <li id="LogOut">  <%=user.firstName%>, <a href="/user/logout">Logout</a></li>
+                <% } %>
+                <% if (user != null) { %>
+                    <li id="new-fitnection"><a href="/user/connections">MyFitnections</a> </li>
+                <% } %>
+                    <li id="new-fitnections"><a href="/connections/new">Start a New Fitnection</a> </li>
+    </ul>
+
+    <div class="dropdown" id="dropdownhide">
+        <button class="dropbtn">⋮</button>
+        <div class="dropdown-content">
+            <a href="">Start a New Fitnection</a>
+            <a href="/user/login">Login</a>
+            <a href="/user/login">SignUp</a>
+        </div>
+    </div>
+
+</nav>

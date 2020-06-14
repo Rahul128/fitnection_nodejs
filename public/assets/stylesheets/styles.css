@@ -1,0 +1,447 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.banner {
+    background-color: rgb(10, 62, 121);
+    color: silver;
+    padding: 10px 20px;
+    width: auto;
+}
+
+.banner a {
+    color: silver;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.banner a:hover {
+    color: silver;
+}
+
+body {
+    /* background-image: url("home_background.jpg"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+nav {
+    background-color: silver;
+    padding: 7px;
+    width: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+nav select {
+    display: none;
+}
+
+li a {
+    color: rgb(10, 62, 121);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: black;
+}
+
+li {
+    display: inline;
+    margin-left: 25px;
+    margin-right: 25px
+}
+
+#LogOut {
+    float: right;
+    color: rgb(10, 62, 121);
+    font-weight: bold;
+}
+
+#Login {
+    float: right;
+}
+
+#new-fitnection {
+    float: right;
+}
+#new-fitnections{
+    float: right;
+}
+
+#SignUp {
+    float: right;
+}
+
+main {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 10%;
+    color: rgb(10, 62, 121);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+    background-color: rgb(10, 62, 121);
+    color: silver;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    left: 0;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#footer {
+    margin: 10px 0 0 50px;
+}
+
+#footer a {
+    color: silver;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+#footer a:hover {
+    color: rgb(151, 192, 229);
+}
+
+#Contact {
+    color: silver;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.dropbtn {
+    background-color: rgb(10, 62, 121);
+    color: silver;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(10, 62, 121);
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: silver;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: silver;
+    color: rgb(10, 62, 121);
+}
+
+.dropdownbar {
+    background-color: rgb(10, 62, 121);
+    width: 30%;
+    position: absolute;
+    margin-top: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+#dropdownhide {
+    display: none;
+}
+
+.Aerobics {
+    margin-top: 50px;
+    margin-left: 20px;
+    color: rgb(10, 62, 121);
+    font-size: 1.2em;
+    align-content: justify;
+    position: relative;
+}
+
+.button {
+    background-color: rgb(10, 62, 121);
+    border: none;
+    color: silver;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.button:hover {
+    background-color: silver;
+    color: rgb(10, 62, 121)
+}
+
+.int {
+    color: rgb(10, 62, 121);
+}
+
+.buttonposition {
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    position: fixed;
+    right: 20%;
+}
+
+table,
+th,
+td {
+    border: 3px solid silver;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+    background-color: rgb(10, 62, 121);
+    color: silver;
+    font-weight: solid;
+    font-size: 1.1em;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+table {
+    width: 70%;
+}
+
+.tablePosition {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.button1 {
+    background-color: silver;
+    border: none;
+    color: rgb(10, 62, 121);
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.button1:hover {
+    background-color: rgb(10, 62, 121);
+    color: silver;
+}
+
+#MyCollectionTittle {
+    color: rgb(10, 62, 121);
+}
+
+.AerobicsContent {
+    text-align: justify;
+    text-justify: inter-word;
+    width: 50%;
+}
+
+.Aerobics {
+    display: inline-block;
+}
+
+.AerboicsImage {
+    display: inline-block;
+}
+
+.details {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.AerboicsImage img {
+    height: 200px;
+}
+
+input {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: rgb(10, 62, 121);
+}
+
+label {
+    width: 350px;
+    font-size: 25px;
+    color: rgb(10, 62, 121);
+}
+
+form {
+    margin: 10%;
+}
+
+#cc {
+    background-color: rgb(10, 62, 121);
+    border: none;
+    color: silver;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: right;
+    margin-right: 25%;
+}
+
+#signup_login{
+    color: rgb(10, 62, 121);
+    font-size: 1.2em;
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#signup-login{
+    margin-top:20px;
+    
+}
+
+.caption_signup{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.error{
+    font-size: 20px;
+    color: rgb(10, 62, 121);
+    margin-top: 20px;
+    margin-left: 60px;
+    color: red;
+}
+    
+#noconnection{
+    color: rgb(10, 62, 121);
+}
+
+#su{
+    background-color: rgb(10, 62, 121);
+    border: none;
+    color: silver;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: right;
+    margin-right: 50%;
+}
+   
+
+@media screen and (max-width:375px) {
+    li a {
+        color: rgb(10, 62, 121);
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+    main {
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 10%;
+        color: rgb(10, 62, 121);
+        font-family: 'Times New Roman', Times, serif;
+        /* text-shadow: 3px 3px 3px snow; */
+    }
+    li {
+        display: inline;
+        margin-left: 10px;
+        margin-right: 10px
+    }
+    #Login {
+        display: none;
+    }
+    #SignUp {
+        display: none;
+    }
+    #new-fitnection {
+        display: none;
+    }
+    .dropbtn {
+        color: rgb(10, 62, 121);
+        background-color: silver;
+        font-weight: bolder;
+        padding: 2px;
+        font-size: 25px;
+        font-weight: bolder;
+    }
+    .dropdown {
+        float: right;
+        margin-top: -29px;
+        margin-right: 10px;
+    }
+    .dropdownbar {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(10, 62, 121);
+        min-width: 140px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 0;
+        opacity: 80%;
+    }
+    #footer {
+        margin-left: 10px;
+    }
+    main {
+        font-size: .8em;
+        font-weight: bold;
+        margin: 10%;
+        margin-top: 25%;
+        color: rgb(10, 62, 121);
+        font-family: 'Times New Roman', Times, serif;
+        text-align: justify;
+    }
+    #dropdownhide {
+        display: inline-block;
+    }
+}

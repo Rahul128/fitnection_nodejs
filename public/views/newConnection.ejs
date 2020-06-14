@@ -1,0 +1,18 @@
+<!-- Form to create a new connection of user choice -->
+<%- include('partials/header.ejs', {user: user}) -%>
+    <form id="new-connection-form" method="POST" action="/connections/new">
+        <label for="ftopic">Topic:   </label>
+        <input type="text" id="ftopic" name="topic" required><br>
+        <label for="fname">Name: </label>
+        <input type="text" id="fname" name="name" required><br>
+        <label for="fdetails">Details: </label>
+        <input type="text" id="fdetails" name="details"><br>
+        <label for="fwhere">Where:</label>
+        <input type="text" id="fwhere" name="where"><br>
+        <label for="fwhen">When: </label>
+        <input type="date" id="fwhen" name="when" required><br>
+        <label for="fat">At: </label>
+        <input type="time" id="fat" name="at" required>
+        <input type="submit" id="su" value="Create Connection">
+    </form>
+<%- include('partials/footer.ejs') -%>

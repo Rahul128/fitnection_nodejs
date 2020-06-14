@@ -1,0 +1,20 @@
+<!-- Categories availabe for uses to choose from -->
+<%- include('partials/header.ejs', {user: user}) -%>
+    <div class="dropdownbar">
+        <% if (connectionsSize > 0) { %>
+            <% connections.forEach(connectionsOfCategory => { %>
+                    <div class="dropdown">
+                        <button class="dropbtn"><%= connectionsOfCategory.connectionCategory %></button>
+                        <div class="dropdown-content">
+                            <% connectionsOfCategory.connections.forEach(connection => { %>
+                                <a href="/connection/<%= connection.connectionId %>">
+                                    <%= connection.connectionName %>
+                                </a>
+                                    <% });%>
+                        </div>
+                    </div>
+
+                    <% }); %>
+                        <% }%>
+    </div>
+    <%- include('partials/footer.ejs') -%>

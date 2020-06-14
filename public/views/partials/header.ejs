@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fitnection</title>
+
+    <meta name="author" content="Rahul Sajjan">
+    <meta name="description" content="Fitnection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
+</head>
+
+<body>
+    <header class="banner">
+        <a href="/">
+            <h1>Fitnection </h1>
+        </a>
+        <p>Let's be fit</p>
+    </header>
+
+    <%- include('./navigation') %>
+
+	<% if (errors != null) { %>
+		<% errors.forEach(error => { %>
+			<section class="error">
+				<p>
+					<%= error.msg %> 
+				</p>
+			</section>
+		<% }) %>
+	<% } %>

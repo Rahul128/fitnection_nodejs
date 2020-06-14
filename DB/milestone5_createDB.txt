@@ -1,0 +1,155 @@
+use fitnection_2_db;
+
+db.connections.drop();
+
+db.createCollection("connections");
+
+db.connections.insert([
+    {
+        connectionId: 1,
+        connectionName : "Aerobics",
+        connectionCategory : "Group Fitness",
+        details : "Aerobics is a form of physical exercise that combines rhythmic aerobic exercise with stretching and strength training routines with the goal of improving all elements of fitness",
+        location : "Charlotte",
+        date : "2020-05-18T16:00:00Z",
+        thumbnail : "FF_A00001.PNG"
+    }, 
+    {
+        connectionId: 2,
+        connectionName : "Dancercise",
+        connectionCategory : "Group Fitness",
+        details : "Dancercise a vigorous dancing done as an exercise for physical fitness.",
+        location : "UNCC",
+        date : "2020-03-18T16:00:00Z",
+        thumbnail : "FF_A00002.jpg"
+    }, 
+    {
+        connectionId: 3,
+        connectionName : "Kickboxing",
+        connectionCategory : "Group Fitness",
+        details : "Kickboxing is a form of martial art which combines boxing with elements of karate, in particular kicking with bare feet.",
+        location : "New York",
+        date : "2020-02-18T16:00:00Z",
+        thumbnail : "FF_A00003.jpg"
+    }, 
+    {
+        connectionId:4,
+        connectionName : "Yoga",
+        connectionCategory : "Group Fitness",
+        details : "Yoga is a Hindu spiritual and ascetic discipline, a part of which, including breath control, simple meditation, and the adoption of specific bodily postures, is widely practiced for health and relaxation.",
+        location : "Chicago",
+        date : "2020-05-18T16:00:00Z",
+        thumbnail : "FF_A00004.jpg"
+    }, 
+    {
+        connectionId: 5,
+        connectionName : "Zumba",
+        connectionCategory : "Group Fitness",
+        details : "Zumba is an aerobic fitness program featuring movements inspired by various styles of Latin American dance and performed primarily to Latin American dance music.",
+        location : "New York",
+        date : "2020-05-18T16:00:00Z",
+        thumbnail : "FF_A00005.jpg"
+    }, 
+    {
+        connectionId: 6,
+        connectionName : "Basketball",
+        connectionCategory : "Sports",
+        details : "Basketball is a game played between two teams of five players in which goals are scored by throwing a ball through a netted hoop fixed above each end of the court.",
+        location : "Charlotte",
+        date : "2020-06-18T16:00:00Z",
+        thumbnail : "FF_A00006.jpg"
+    }, 
+    {
+        connectionId: 7,
+        connectionName : "Ping-pong",
+        connectionCategory : "Sports",
+        details : "Ping-pong is a sport in which two or four players hit a lightweight ball back and forth across a table using small rackets.",
+        location : "Chicago",
+        date : "2020-09-21T16:00:00Z",
+        thumbnail: "FF_A00007.jpg"
+    },
+   {
+        connectionId: 8,
+        connectionName : "Swimming",
+        connectionCategory : "Sports",
+        details : "Swimming is defined as using your arms and legs to move through water. When you do the backstroke or breaststroke in your pool, this is an example ofswimming",
+        location : "New Jersey",
+        date : "2020-06-18T16:00:00Z",
+        thumbnail: "FF_A00008.jpg"
+    },
+   {
+        connectionId: 9,
+        connectionName : "Squash",
+        connectionCategory : "Sports",
+        details : "Squash is a racket and ball sport played by two (singles) or four players (doubles squash) in a four-walled court with a small, hollow rubber ball.",
+        location : "New York",
+        date : "2020-06-18T16:00:00Z",
+        thumbnail: "FF_A00009.jpg"
+    },
+   {
+        connectionId: 10,
+        connectionName : "Volleyball",
+        connectionCategory : "Sports",
+        details : "Volleyball is a game for two teams, usually of six players, in which a large ball is hit by hand over a high net, the aim being to score points by making the ball reach the ground on the opponent's side of the court.",
+	location : "Charlotte",
+        date : "2020-06-18T16:00:00Z",
+        thumbnail: "FF_A00010.jpg"
+    },
+ {
+        connectionId: 11,
+        connectionName : "Cardio",
+        connectionCategory : "Workout",
+        details : "Cardio exercise is any exercise that raises your heart rate. Your heart is a muscle. Therefore working it makes it stronger",
+	location : "New York",
+        date : "2020-06-18T16:00:00Z",
+        thumbnail: "FF_A00011.jpg"
+    },
+ {
+        connectionId: 12,
+        connectionName : "Cross-Fitness",
+        connectionCategory : "Workout",
+        details : "CrossFit is a strength and conditioning program consisting mainly of a mix of aerobic exercise, calisthenics (body weight exercises), and Olympic weightlifting.",
+	location : "Chicago",
+        date : "2020-09-21T16:00:00Z",
+        thumbnail: "FF_A00012.jpg"
+    },
+ {
+        connectionId: 13,
+        connectionName : "Weight-Training",
+        connectionCategory : "Workout",
+        details : "Weight training is a common type of strength training for developing the strength and size of skeletal muscles.",
+	location : "Charlotte",
+        date : "2020-09-21T16:00:00Z",
+        thumbnail: "FF_A00013.jpg"
+    },
+   ]);
+
+db.users.drop();
+
+db.createCollection("users");
+
+db.users.insert({
+    "userId": 1,
+    "firstName": "Rahul",
+    "lastName": "Sajjan",
+    "email": "rsajjan@uncc.edu",
+    "password": "$2b$10$HwjzdB4QSfOw9nn7/VoSzuw.EMYu9MJDsuiRZnS.WHd3TeatS7Caq",
+    "address1": "216 Barton Creek Drive",
+    "address2": "Apt F",
+    "city": "Charlotte",
+    "state": "NC",
+    "zipcode": "28262",
+    "country": "United States"
+});
+
+db.counters.drop();
+
+db.createCollection("counters");
+
+db.counters.insert({
+    "id" : "connectionId",
+    "reference_value" : null,
+    "seq":13
+});
+
+db.userConnections.drop();

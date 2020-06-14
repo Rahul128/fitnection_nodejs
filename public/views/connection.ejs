@@ -1,0 +1,62 @@
+<!-- Detalis page, Where users can choose to attend, not attend or maybe for the events  -->
+<%- include('partials/header.ejs', {user: user}) -%>
+    <div class="Aerobics">
+        <h2>
+            <%= connection.connectionName %>
+        </h2>
+        <br />
+        <div class="AerboicsImage"><img src="/assets/connection_thumbnails/<%= connection.thumbnail %>" alt="AerobicsImage"></div>
+        <div class="details">
+            <h4>Category:
+                <%= connection.connectionCategory %>
+            </h4>
+            <h4>Events on:
+                <%= connection.date %>
+            </h4>
+            <h4>Venue:
+                <%= connection.location %>
+            </h4>
+
+        </div>
+
+        <div class="buttonposition">
+
+            <h2 class="int">Interested?</h2>
+            <br />
+            <!-- To attend -->
+            <form action="/user/rsvp" method="post" >
+                <% if (connectionExists) { %>
+                <input type="hidden" name="_method" value="put" />
+                <% } %>
+                <input type="hidden" name="rsvp-type" value="yes" />
+                <input type="hidden" name="connection-id" value="<%= connection.connectionId %>" />
+                <button class="button">I'm in</button>
+            </form>
+             <!-- To not attend -->
+            <form action="/user/rsvp" method="post">
+                <% if (connectionExists) { %>
+                <input type="hidden" name="_method" value="put" />
+                <% } %>
+                <input type="hidden" name="rsvp-type" value="no" />
+                <input type="hidden" name="connection-id" value="<%= connection.connectionId %>" />
+                <button class="button">No</button>
+            </form>
+              <!-- Maybe attend -->
+            <form action="/user/rsvp" method="post">
+                <% if (connectionExists) { %>
+                <input type="hidden" name="_method" value="put" />
+                <% } %>
+                <input type="hidden" name="rsvp-type" value="maybe" />
+                <input type="hidden" name="connection-id" value="<%= connection.connectionId %>" />
+                <button class="button">Maybe</button>
+            </form>
+        </div>
+
+        <div class="AerobicsContent">
+            <%= connection.details %>
+        </div>
+
+        <br />
+
+    </div>
+    <%- include('partials/footer.ejs') -%>
